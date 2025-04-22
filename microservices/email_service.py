@@ -5,11 +5,12 @@ from email.mime.multipart import MIMEMultipart
 black_listed_mails = [] # To add in the future
 
 mail_port = 465 # SSL port
-my_email = 'kevincncaplescu@gmail.com'
+my_email = 'your_email_duh'
 
 
 ssl_context = ssl.create_default_context()
 
+# function to send email to main account
 def SendDetailsToMainMail(data,apiData):
     try:
         if black_listed_mails.index(data['CONTACT']): # should raise if not in the blacklist
@@ -47,7 +48,10 @@ def SendDetailsToMainMail(data,apiData):
                 raise
 
 
+# Function to send a receipt to the client!
 def SendReceiptToClient(ReceiptData,apiData):
+    # apiData -> info and data in regards to gmail being used
+    # receiptData -> user data needed to recieve the receipt
     try:
         with smtplib.SMTP_SSL("smtp.gmail.com",mail_port,context=ssl_context) as server:
             server.login(apiData["notifier_mail"],password=apiData["notifier_pass"])
@@ -120,7 +124,6 @@ def SendReceiptToClient(ReceiptData,apiData):
                             Thanks for reaching out! Our team of experts is already working on your {requestType} request and will get back to you as soon as possible.<br /><br />
                             In the meantime, feel free to explore our website and learn more about our services.<br /><br />
                             Have a great day!<br /><br />
-                            <strong>Kevin Caplescu<br />Founder, Kevin-Caplescu.dev</strong>
                             </p>
                         </td>
                         </tr>
