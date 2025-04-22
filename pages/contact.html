@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kevin-Caplescu.dev - Web solutions for businesses of all kind.</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-[#15191d] text-gray-900 font-Oranienbaum overflow-x-hidden">
+
+  <nav class="h-16 bg-gradient-to-b from-[#15191d] to-[#323c45] flex items-center px-10">
+    <section class="max-w-8xl mx-auto flex justify-between items-center h-full w-full">
+      <section class="flex items-center">
+        <h2 class="text-xl font-semibold text-stone-100 hover:text-slate-500">
+          <a href="/">Kevin-Caplescu.dev &copy;</a>
+        </h2>
+      </section>
+      <section class="hidden md:flex space-x-20 h-full items-center text-stone-100">
+        <a href="/" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">Home</a>
+        <a href="/about" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">About</a>
+        <a href="/services" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">Services</a>
+        <a href="/contact" class="hover:bg-gray-400 text-slate-500 flex items-center h-full px-4 transition duration-200">Contact</a>
+      </section>
+      <section class="md:hidden">
+        <button class="text-white" id="mobile-menu-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </section>
+    </section>
+  </nav>
+
+  <section class="md:hidden hidden" id="mobile-menu">
+    <section class="flex flex-col items-center py-4 space-y-4 bg-gray-800 text-white">
+      <a href="/" class="hover:text-gray-400">Home</a>
+      <a href="/about" class="hover:text-gray-400">About</a>
+      <a href="/services" class="hover:text-gray-400">Services</a>
+      <a href="/contact" class="hover:text-gray-400">Contact</a>
+    </section>
+  </section>
+
+  <section id="fade-out" class="bg-[#15191d] w-full h-full">
+    <section class="relative bg-fixed bg-cover bg-center" style="background-image: url('/static/documents/MainImg.jpg');">
+      <section class="bg-[#323c45] bg-opacity-80 py-10 px-6 text-center text-white w-full h-full">
+        <section class="mb-16">
+          <section class="bg-[#15191d] rounded-md px-4 sm:px-8">
+            <section class="py-16 text-center text-[#cfd8f1]">
+              <h2 class="text-white text-xl mb-5 font-bold">
+                Are you interested?<br>
+                Do you have any questions?<br>
+                Got a website idea in mind?<br>
+              </h2>
+              <h1 class="text-4xl bg-gradient-to-b from-[#CFD8F1] to-[#8B92A3] bg-clip-text text-transparent font-bold">
+                Contact us TODAY!
+              </h1>
+            </section>
+  
+            <section class="mt-2 max-w-4xl mx-auto bg-[linear-gradient(180deg,_rgba(24,28,32,.97)_0%,_rgba(35,42,48,.97)_15%)] bg-opacity-80 p-8 rounded-lg shadow-lg">
+              <form action="/send-email" method="POST" class="space-y-4">
+                <section class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 mb-10">
+                  <input type="text" name="name" placeholder="Your Name" required class="flex-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                  <input type="email" name="email" placeholder="Your Email" required class="flex-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                </section>
+                <section class="mb-6">
+                  <label for="service-type" class="block text-white mb-2">Choose a Service Type:</label>
+                  <select title="_" name="service_type" id="service_type" required class="w-full p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="web development">Web Development</option>
+                    <option value="web page design">Web Page Design</option>
+                    <option value="consultation">IT Consultation</option>
+                  </select>
+                </section>
+                <textarea name="message" rows="5" placeholder="Your Message" required class="text-black w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"></textarea>
+                <section class="flex justify-center">
+                  <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">Send Message</button>
+                </section>
+              </form>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <footer class="bg-gradient-to-b from-[#323c45] to-[#15191d] text-white py-8 px-6">
+    <section class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <section class="mb-4 md:mb-0">
+        <h2 class="text-xl font-semibold">Kevin-Caplescu.dev &copy;</h2>
+        <p class="text-sm mt-1">Delivering smart, scalable digital solutions.</p>
+      </section>
+      <section class="flex space-x-6">
+        <a href="https://www.linkedin.com/in/kevin-cpl" target="_blank" aria-label="LinkedIn" class="hover:text-blue-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.8v2.1h.05c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.5c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.95V24h-4V8.5z"/></svg>
+        </a>
+        <a href="https://github.com/Kevin-CNC" target="_blank" aria-label="GitHub" class="hover:text-gray-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12c0 5.1 3.29 9.42 7.86 10.96.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2.01-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.42.36.77 1.09.77 2.21 0 1.6-.02 2.9-.02 3.3 0 .31.21.68.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/></svg>
+        </a>
+      </section>
+    </section>
+  </footer>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

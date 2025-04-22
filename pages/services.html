@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin-Caplescu.dev - Web solutions for businesses of all kind.</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!--  Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+  <!--         -->
+</head>
+<body class="bg-[#15191d] text-gray-900 font-Oranienbaum">
+
+  <nav class="h-16 bg-gradient-to-b from-[#15191d] to-[#323c45] flex items-center px-10">
+    <section class="max-w-8xl mx-auto flex justify-between items-center h-full w-full">
+
+      <section class="flex items-center">
+        <h2 class="text-xl font-semibold text-stone-100 hover:text-slate-500"><a href="/">Kevin-Caplescu.dev &copy;</a></h2>
+      </section>
+  
+      <section class="hidden md:flex space-x-20 h-full items-center text-stone-100">
+        <a href="/" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">Home</a>
+        <a href="/about" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">About</a>
+        <a href="/services" class="hover:bg-gray-400 flex text-slate-500 items-center h-full px-4 transition duration-200">Services</a>
+        <a href="/contact" class="hover:bg-gray-400 flex items-center h-full px-4 transition duration-200">Contact</a>
+      </section>
+  
+      <section class="md:hidden">
+        <button class="text-white" id="mobile-menu-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </section>
+    </section>
+  </nav>
+  
+
+  <section id="mobile-menu" class="md:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out">
+    <section class="flex flex-col items-center py-4 space-y-4 bg-gray-800 text-white">
+      <a href="/" class="hover:text-gray-400">Home</a>
+      <a href="/about" class="hover:text-gray-400">About</a>
+      <a href="/services" class="hover:text-gray-400">Services</a>
+      <a href="/contact" class="hover:text-gray-400">Contact</a>
+    </section>
+  </section>
+
+  <section id="fade-out" class="bg-[#15191d] w-full h-full">
+    <section class="relative bg-fixed h-full bg-cover bg-center" style="background-image: url('/static/documents/MainImg.jpg');">
+      <section class="bg-[#323c45] bg-opacity-80 py-10 text-center h-full w-full text-white">
+        <section class="bg-[#15191d] rounded-md w-full pb-5">
+          <section class="py-16 px-4 text-center text-[#cfd8f1] mb-5 mt-10">
+            <h1 class="text-4xl bg-gradient-to-b from-[#CFD8F1] to-[#8B92A3] bg-clip-text text-transparent mb-6">
+              <b>SERVICES:</b>
+            </h1>
+            <p class="text-white text-xl text-sm">
+              We offer a wide range of services, tailored to your business needs. You want more details?<br>
+              <i>Here is what <b>we</b> can do for your business:</i>
+            </p>
+          </section>
+        
+          <section style="background-image: url('/static/documents/Coding.jpg');" class=" bg-fixed bg-cover bg-center text-center text-[#cfd8f1] mb-20 mt-20 ml-10 mr-10 mb-10 mt-5 ml-8 mr-8 rounded-md">
+            <section class="bg-[linear-gradient(180deg,_rgba(24,28,32,.97)_0%,_rgba(35,42,48,.97)_15%)] bg-opacity-90 py-10 px-6 rounded-md">
+              <h1 class="text-4xl bg-gradient-to-b from-[#CFD8F1] to-[#8B92A3] bg-clip-text text-transparent mb-6 transition-transform duration-500 ease-out hover:scale-105">
+                <b>Website Development:</b>
+              </h1>
+              <p class="text-white text-xl text-sm mb-4 leading-10 transition-transform duration-500 ease-out hover:scale-105">
+                <i>Our main strength. We create custom websites tailored to your business needs.</i><br>
+                These can range from simple landing pages to creating a full-fledged e-commerce website.<br><br>
+                We offer <b>flexible packages</b>, ranging from simply <b>creating the website</b>, to <b>hosting & maintaining it</b> for you.<br>
+              </p>
+            </section>
+          </section>
+        
+          <section style="background-image: url('/static/documents/Designer.jpg');" class=" bg-fixed bg-cover bg-center text-center text-[#cfd8f1] mb-20 mt-20 ml-10 mr-10 mb-10 mt-5 ml-8 mr-8 rounded-md">
+            <section class="bg-[linear-gradient(180deg,_rgba(24,28,32,.95)_0%,_rgba(35,42,48,.95)_15%)] bg-opacity-90 py-10 px-6 rounded-md">
+              <h1 class="text-4xl bg-gradient-to-b from-[#CFD8F1] to-[#8B92A3] bg-clip-text text-transparent mb-6 transition-transform duration-500 ease-out hover:scale-105">
+                <b>Web Design:</b>
+              </h1>
+              <p class="text-white text-xl text-sm mb-4 leading-10 transition-transform duration-500 ease-out hover:scale-105">
+                <i>If you simply want someone to give your website a new look, you're in the right hands.</i><br><br>
+                We provide designs for any sort of occasion: From <b>creating a concept for your website</b> to <b>refreshning it with new UIs & creative layouts</b>.<br>
+              </p>
+            </section>
+          </section>
+        
+          <section style="background-image: url('/static/documents/Consultancy.jpg');" class=" bg-fixed bg-cover bg-center text-center text-[#cfd8f1] mb-20 mt-20 ml-10 mr-10 mb-10 mt-5 ml-8 mr-8 rounded-md">
+            <section class="bg-[linear-gradient(180deg,_rgba(24,28,32,.97)_0%,_rgba(35,42,48,.97)_15%)] bg-opacity-90 py-10 px-6 rounded-md">
+              <h1 class="text-4xl bg-gradient-to-b from-[#CFD8F1] to-[#8B92A3] bg-clip-text text-transparent mb-6 transition-transform duration-500 ease-out hover:scale-105">
+                <b>IT Consultations:</b>
+              </h1>
+              <p class="text-white text-xl text-sm mb-4 leading-10 transition-transform duration-500 ease-out hover:scale-105">
+                <i>Confused about where to start? SEO practices? How to host? How to even set up something?</i><br><br>
+                Don't go through that trouble alone! <b>Our team of experts will guide you and  with your tasks at hand</b>.<br>
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+
+
+  <footer class="bg-gradient-to-b from-[#323c45] to-[#15191d] text-white py-8 px-6">
+    <section class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      
+      <section class="mb-4 md:mb-0">
+        <h2 class="text-xl font-semibold">Kevin-Caplescu.dev &copy;</h2>
+        <p class="text-sm mt-1">Delivering smart, scalable digital solutions.</p>
+      </section>
+  
+      <section class="flex space-x-6">
+        <a href="https://www.linkedin.com/in/kevin-cpl" target="_blank" aria-label="LinkedIn" class="hover:text-blue-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm7.5 0h3.8v2.1h.05c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.5c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.95V24h-4V8.5z"/>
+          </svg>
+        </a>
+  
+
+        <a href="https://github.com/Kevin-CNC" target="_blank" aria-label="GitHub" class="hover:text-gray-400 transition">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.5 5.74.5 12c0 5.1 3.29 9.42 7.86 10.96.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2.01-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.16 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.82 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.42.36.77 1.09.77 2.21 0 1.6-.02 2.9-.02 3.3 0 .31.21.68.8.56A10.51 10.51 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/>
+          </svg>
+        </a>
+      </section>
+  
+    </section>
+  </footer>
+  
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
